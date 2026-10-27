@@ -39,8 +39,8 @@
     --bg-alt:#e4e9f1;
     --card:#ffffff;
     --line:#d7dce6;
-    --amber:#a3620a;
-    --teal:#0d9488;
+    --amber:#8a5208;
+    --teal:#0f766e;
     --text:#111827;
     --muted:#5b6478;
     --header-bg:rgba(238,241,246,0.85);
@@ -612,6 +612,9 @@
   section{transition:opacity .6s ease, transform .6s ease;}
   section.visible{opacity:1;transform:translateY(0);}
 
+  .skip-link{position:absolute;left:16px;top:-48px;z-index:1000;background:var(--amber);color:#241a05;padding:10px 16px;border-radius:6px;font-weight:600;text-decoration:none;}
+  .skip-link:focus{top:12px;}
+  html[data-theme="light"] .btn-primary, html[data-theme="light"] .nav-cta:hover, html[data-theme="light"] .skip-link{color:#ffffff;}
   a:focus-visible, button:focus-visible{
     outline:2px solid var(--amber);
     outline-offset:3px;
@@ -632,6 +635,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#about">Skip to content</a>
 
 <header>
   <div class="nav">
