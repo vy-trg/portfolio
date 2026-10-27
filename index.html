@@ -17,7 +17,9 @@
 <meta name="twitter:image" content="https://vy-trg.github.io/portfolio/Portfolio.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/portrait.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --bg:#0b1220;
@@ -343,7 +345,7 @@
     border-bottom:1px solid var(--line);
     overflow:hidden;
   }
-  .proj-thumb img{
+  .proj-thumb img, .proj-thumb video{
     width:100%;
     height:100%;
     object-fit:cover;
@@ -353,7 +355,7 @@
   .proj-card:hover .proj-thumb img{transform:scale(1.06);}
   .proj-card.featured{grid-column:1/-1;flex-direction:row;}
   .proj-card.featured .proj-thumb{width:52%;aspect-ratio:auto;min-height:280px;border-bottom:none;border-right:1px solid var(--line);flex-shrink:0;}
-  .proj-card.featured .proj-thumb img{object-fit:contain;background:#000;}
+  .proj-card.featured .proj-thumb img, .proj-card.featured .proj-thumb video{object-fit:contain;background:#000;}
   .proj-card.featured:hover .proj-thumb img{transform:none;}
   @media (max-width:680px){
     .proj-card.featured{flex-direction:column;}
@@ -653,7 +655,7 @@
   </nav>
 </header>
 
-<div class="route" id="top">
+<main class="route" id="top">
 <svg class="train-marker" id="trainMarker" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="top:70px;">
   <circle cx="12" cy="12" r="10" fill="#0b1220" stroke="#ffb238" stroke-width="2"/>
   <rect x="7" y="8" width="10" height="7" rx="1.5" fill="#ffb238"/>
@@ -676,7 +678,7 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="Portfolio.png" alt="Portrait of Vy Truong">
+      <img src="assets/portrait.webp" alt="Portrait of Vy Truong" width="560" height="840" fetchpriority="high">
     </div>
   </div>
   <svg class="track-line" viewBox="0 0 520 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -786,7 +788,7 @@
   <div class="proj-grid" id="projGrid">
 
     <div class="proj-card featured">
-      <div class="proj-thumb"><img src="assets/tetris-gameplay.gif" alt="Two AI players competing in two-player Tetris mode"></div>
+      <div class="proj-thumb"><video src="assets/tetris-gameplay.mp4" poster="assets/tetris-poster.webp" autoplay muted loop playsinline preload="none" width="640" height="466" aria-label="Two AI players competing in two-player Tetris mode"></video></div>
       <div class="proj-body">
         <div class="proj-top">
           <h3>JavaFX Tetris</h3>
@@ -807,7 +809,7 @@
     </div>
 
     <div class="proj-card">
-      <div class="proj-thumb"><img src="vy-trg.github.io_energycheck_.png" alt="EnergyCheck website screenshot"></div>
+      <div class="proj-thumb"><img src="assets/energycheck.webp" alt="EnergyCheck website screenshot" width="1100" height="849" loading="lazy" decoding="async"></div>
       <div class="proj-body">
         <div class="proj-top">
           <h3>EnergyCheck</h3>
@@ -827,7 +829,7 @@
     </div>
 
     <div class="proj-card">
-      <div class="proj-thumb"><img src="vy-trg.github.io_qld-railway-map_.png" alt="Queensland Railway Interactive Map screenshot"></div>
+      <div class="proj-thumb"><img src="assets/qld-railway-map.webp" alt="Queensland Railway Interactive Map screenshot" width="1100" height="1106" loading="lazy" decoding="async"></div>
       <div class="proj-body">
         <div class="proj-top">
           <h3>Queensland Railway Interactive Map</h3>
@@ -847,7 +849,7 @@
     </div>
 
     <div class="proj-card">
-      <div class="proj-thumb"><img src="kakadu-erd.jpg" alt="Kakadu Kitchen database ERD diagram"></div>
+      <div class="proj-thumb"><img src="assets/kakadu-erd.webp" alt="Kakadu Kitchen database ERD diagram" width="1100" height="568" loading="lazy" decoding="async"></div>
       <div class="proj-body">
         <div class="proj-top">
           <h3>Kakadu Kitchen Database System</h3>
@@ -1017,7 +1019,7 @@
   </div>
 </section>
 
-</div>
+</main>
 
 <footer>
   <div class="footer-row">
