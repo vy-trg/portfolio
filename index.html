@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vy Truong — Software Development Student</title>
-<meta name="description" content="Vy Truong — second-year Bachelor of IT (Software Development) student at Griffith University, Brisbane. Portfolio of projects in JavaScript, SQL, Python and Java. Open to internship and placement opportunities.">
+<meta name="description" content="Vy Truong, penultimate-year Bachelor of IT (Software Development) student at Griffith University, Brisbane. Projects in Java, JavaScript, Python, SQL and Power BI. Open to internship, WIL and graduate roles.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-size='26' font-weight='700' fill='%23ffb238' text-anchor='middle'%3Evy%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Vy Truong — Software Development Student">
-<meta property="og:description" content="Second-year Bachelor of IT (Software Development) student at Griffith University, Brisbane. Open to internship and placement opportunities.">
-<meta property="og:image" content="https://vy-trg.github.io/vy-trg-portfolio/Portfolio.png">
-<meta property="og:url" content="https://vy-trg.github.io/vy-trg-portfolio/">
+<meta property="og:description" content="Penultimate-year Bachelor of IT (Software Development) student at Griffith University, Brisbane. Open to internship, WIL and graduate roles.">
+<meta property="og:image" content="https://vy-trg.github.io/portfolio/Portfolio.png">
+<meta property="og:url" content="https://vy-trg.github.io/portfolio/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vy Truong — Software Development Student">
-<meta name="twitter:description" content="Second-year Bachelor of IT (Software Development) student at Griffith University, Brisbane.">
-<meta name="twitter:image" content="https://vy-trg.github.io/vy-trg-portfolio/Portfolio.png">
+<meta name="twitter:description" content="Penultimate-year Bachelor of IT (Software Development) student at Griffith University, Brisbane.">
+<meta name="twitter:image" content="https://vy-trg.github.io/portfolio/Portfolio.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -169,7 +169,7 @@
   }
   section{
     position:relative;
-    padding:88px 0 88px 46px;
+    padding:64px 0 64px 46px;
     border-bottom:none;
   }
   section:first-of-type{padding-top:70px;}
@@ -351,6 +351,16 @@
     transition:transform .4s ease;
   }
   .proj-card:hover .proj-thumb img{transform:scale(1.06);}
+  .proj-card.featured{grid-column:1/-1;flex-direction:row;}
+  .proj-card.featured .proj-thumb{width:52%;aspect-ratio:auto;min-height:280px;border-bottom:none;border-right:1px solid var(--line);flex-shrink:0;}
+  .proj-card.featured .proj-thumb img{object-fit:contain;background:#000;}
+  .proj-card.featured:hover .proj-thumb img{transform:none;}
+  @media (max-width:680px){
+    .proj-card.featured{flex-direction:column;}
+    .proj-card.featured .proj-thumb{width:100%;aspect-ratio:16/9;min-height:0;border-right:none;border-bottom:1px solid var(--line);}
+  }
+  .proj-thumb.placeholder span{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);letter-spacing:.04em;}
+  .exp-list{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px;display:grid;gap:4px;}
   .proj-thumb.placeholder{
     display:flex;
     align-items:center;
@@ -610,6 +620,13 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;animation:none !important;}
   }
+  @media (max-width:720px){
+    .also-built-item{flex-direction:column;align-items:flex-start;gap:6px;}
+    .also-built-item > div:first-child{min-width:0;width:100%;}
+    .also-built-links{align-self:flex-start;}
+    .also-built-tech{display:block;white-space:normal;margin-left:0;margin-top:2px;}
+  }
+  .proj-thumb.placeholder span{padding:0 16px;text-align:center;}
 </style>
 </head>
 <body>
@@ -650,7 +667,7 @@
     <div>
       <span class="badge"><span class="badge-dot"></span>Brisbane, QLD — open to internship &amp; placement roles</span>
       <h1>Hi, I'm Vy — a software<br>development <em>student</em>.</h1>
-      <p class="lede">Second-year at Griffith University, Brisbane. I build things in JavaScript, SQL, Python and Java, and I'm looking for an internship or student-friendly role where I can keep growing as a developer.</p>
+      <p class="lede">Penultimate-year Bachelor of IT student at Griffith University, Brisbane. I write tested, maintainable code in Java, JavaScript and Python, and I'm looking for a software development internship, WIL placement or graduate role.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:vivian.trg3@gmail.com">Email me</a>
         <a class="btn btn-ghost" href="Vy_Truong_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
@@ -677,9 +694,8 @@
     <span class="eyebrow">01 — about</span>
     <h2>Where I'm at</h2>
   </div>
-  <p>I didn't pick Software Development with a grand plan — it was a fairly practical choice at first, IT felt like a stable path. Two years in, that's turned into a real interest: I like the moment something I've built actually works for someone else, and I like building it as part of a team more than solo — some of my best work at uni came from figuring things out with other people, not alone. People who've worked with me tend to say the same thing: I'm the one who double-checks the details and actually listens when something isn't working for someone else on the team — probably why leading the EnergyCheck team and tutoring both came naturally to me. Long-term, my goal is simple: become a genuinely good developer, sharp enough to hold my own at a company that keeps pushing me to improve.</p>
-  <p>I've picked up hands-on experience with <strong>JavaScript applications, SQL and database design, and data visualisation</strong> through university projects. This trimester I added <strong>Java and object-oriented design, unit testing, and Power BI data modelling</strong>, and I'm actively looking for an internship, Work Integrated Learning placement, or student-friendly role in software, QA, data, or IT support.</p>
-  <p>Outside of code, I work casual hospitality shifts and go to as many Brisbane tech meetups as I can fit in — I like sitting in a room where I'm not the expert and picking things up from the people who are.</p>
+  <p>I like the moment something I've built works for someone else, and I do my best work in a team. At uni I've built a JavaFX game with a game-playing AI, a responsive website as Design Thinking Lead, a MySQL database and Power BI dashboards. I care about the unglamorous parts too: tests, clear READMEs and checking the details.</p>
+  <p>I'm looking for an internship, Work Integrated Learning placement or graduate role in software, data or QA. Outside of code I work casual hospitality shifts, which taught me to stay accurate and calm when it's busy.</p>
 </section>
 
 <section id="skills">
@@ -692,64 +708,65 @@
     <div class="skill-group">
       <h3>Languages</h3>
       <div class="chip-row">
-        <span class="chip">JavaScript</span>
-        <span class="chip">SQL</span>
-        <span class="chip">Python</span>
         <span class="chip">Java</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
         <span class="chip">HTML</span>
         <span class="chip">CSS</span>
         <span class="chip">DAX</span>
       </div>
     </div>
     <div class="skill-group">
-      <h3>Tools &amp; platforms</h3>
+      <h3>Frameworks &amp; libraries</h3>
       <div class="chip-row">
-        <span class="chip">Git / GitHub</span>
-        <span class="chip">MySQL</span>
-        <span class="chip">p5.js</span>
         <span class="chip">JavaFX</span>
-        <span class="chip">Maven</span>
         <span class="chip">JUnit 5</span>
         <span class="chip">Mockito</span>
         <span class="chip">Python unittest</span>
-        <span class="chip">Power BI (Power Query)</span>
-        <span class="chip">IntelliJ IDEA</span>
-        <span class="chip">VS Code</span>
-        <span class="chip">draw.io</span>
-        <span class="chip">Microsoft 365</span>
+        <span class="chip">NumPy</span>
+        <span class="chip">Matplotlib</span>
+        <span class="chip">p5.js</span>
       </div>
     </div>
     <div class="skill-group">
-      <h3>Relevant areas</h3>
+      <h3>Testing &amp; design</h3>
       <div class="chip-row">
-        <span class="chip">Data visualisation</span>
-        <span class="chip">Database design</span>
-        <span class="chip">Responsive design</span>
-        <span class="chip">UX wireframing</span>
-        <span class="chip">Algorithms &amp; data structures</span>
-        <span class="chip">OOP, SOLID &amp; UML design</span>
+        <span class="chip">Unit testing</span>
+        <span class="chip">Stubs &amp; mocks</span>
+        <span class="chip">Branch coverage</span>
+        <span class="chip">CI with GitHub Actions</span>
+        <span class="chip">Object-oriented programming</span>
+        <span class="chip">Design patterns</span>
         <span class="chip">MVC</span>
-        <span class="chip">Unit testing &amp; TDD</span>
-        <span class="chip">Code coverage</span>
         <span class="chip">Layered architecture</span>
         <span class="chip">REST APIs</span>
+        <span class="chip">Relational database design</span>
         <span class="chip">Data modelling (star schema)</span>
       </div>
     </div>
     <div class="skill-group">
-      <h3>Project &amp; delivery</h3>
+      <h3>Process &amp; tools</h3>
       <div class="chip-row">
         <span class="chip">SDLC &amp; Agile</span>
-        <span class="chip">Requirements engineering</span>
-        <span class="chip">WBS &amp; Gantt planning</span>
-        <span class="chip">Risk analysis (EMV)</span>
-        <span class="chip">RACI &amp; stakeholder management</span>
+        <span class="chip">Requirements &amp; use cases</span>
+        <span class="chip">WBS &amp; Gantt charts</span>
+        <span class="chip">Risk registers</span>
+        <span class="chip">Git / GitHub</span>
+        <span class="chip">Maven</span>
+        <span class="chip">IntelliJ IDEA</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Chrome DevTools</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">Power BI (Power Query)</span>
+        <span class="chip">Excel</span>
+        <span class="chip">draw.io</span>
       </div>
     </div>
     <div class="skill-group">
       <h3>Languages spoken</h3>
       <div class="chip-row">
-        <span class="chip">English</span>
+        <span class="chip">English (fluent)</span>
         <span class="chip">Vietnamese (native)</span>
       </div>
     </div>
@@ -767,6 +784,47 @@
     <button id="clearFilter">Clear ✕</button>
   </div>
   <div class="proj-grid" id="projGrid">
+
+    <div class="proj-card featured">
+      <div class="proj-thumb"><img src="assets/tetris-gameplay.gif" alt="Two AI players competing in two-player Tetris mode"></div>
+      <div class="proj-body">
+        <div class="proj-top">
+          <h3>JavaFX Tetris</h3>
+          <span class="proj-year">2026<span class="proj-grade">96/100</span></span>
+        </div>
+        <p>A Tetris game built in a team of three. I wrote the game engine, restructured it into MVC with the State pattern, built a heuristic AI player and two-player mode with a thread-safe shared piece sequence, and wrote all 21 unit tests, which GitHub Actions runs on every push.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Java</span>
+          <span class="proj-tag">JavaFX</span>
+          <span class="proj-tag">JUnit 5</span>
+          <span class="proj-tag">Mockito</span>
+          <span class="proj-tag">GitHub Actions</span>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link secondary" href="https://github.com/vy-trg/javafx-tetris" target="_blank" rel="noopener">View code ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-thumb"><img src="vy-trg.github.io_energycheck_.png" alt="EnergyCheck website screenshot"></div>
+      <div class="proj-body">
+        <div class="proj-top">
+          <h3>EnergyCheck</h3>
+          <span class="proj-year">2026<span class="proj-grade">High Distinction</span></span>
+        </div>
+        <p>A 10-page responsive website for Australian renters, built by a team of five. As team leader and Design Thinking Lead I guided the team from empathy research to user testing, built the shared stylesheet (CSS custom properties, responsive grid, dark mode) and wrote the site's JavaScript, including a high-contrast mode and ARIA fixes.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">HTML</span>
+          <span class="proj-tag">CSS</span>
+          <span class="proj-tag">JavaScript</span>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://vy-trg.github.io/energycheck/" target="_blank" rel="noopener">Live demo ↗</a>
+          <a class="proj-link secondary" href="https://github.com/vy-trg/energycheck" target="_blank" rel="noopener">View code ↗</a>
+        </div>
+      </div>
+    </div>
 
     <div class="proj-card">
       <div class="proj-thumb"><img src="vy-trg.github.io_qld-railway-map_.png" alt="Queensland Railway Interactive Map screenshot"></div>
@@ -789,26 +847,6 @@
     </div>
 
     <div class="proj-card">
-      <div class="proj-thumb"><img src="vy-trg.github.io_energycheck_.png" alt="EnergyCheck website screenshot"></div>
-      <div class="proj-body">
-        <div class="proj-top">
-          <h3>EnergyCheck</h3>
-          <span class="proj-year">2026<span class="proj-grade">High Distinction</span></span>
-        </div>
-        <p>A 10-page responsive website for Australian renters, built with a team of five through the full Design Thinking process — from empathy research to user testing. I built the shared stylesheet using CSS custom properties, a responsive grid, and dark mode support.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">HTML</span>
-          <span class="proj-tag">CSS</span>
-          <span class="proj-tag">JavaScript</span>
-        </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://vy-trg.github.io/energycheck/" target="_blank" rel="noopener">Live demo ↗</a>
-          <a class="proj-link secondary" href="https://github.com/vy-trg/energycheck" target="_blank" rel="noopener">View code ↗</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="proj-card">
       <div class="proj-thumb"><img src="kakadu-erd.jpg" alt="Kakadu Kitchen database ERD diagram"></div>
       <div class="proj-body">
         <div class="proj-top">
@@ -826,22 +864,20 @@
     </div>
 
     <div class="proj-card">
-      <div class="proj-thumb"><img src="vy-trg.github.io_space-shooter-game_.png" alt="Space Shooter Game screenshot"></div>
+      <div class="proj-thumb placeholder"><span>Power BI · Business Intelligence</span></div>
       <div class="proj-body">
         <div class="proj-top">
-          <h3>Space Shooter Game</h3>
-          <span class="proj-year">2025</span>
+          <h3>Power BI Dashboards and Reports</h3>
+          <span class="proj-year">2026</span>
         </div>
-        <p>A browser-based game with four scenes, sprite collision detection, keyboard controls, sound, video, GUI text input, and a JSON-driven leaderboard to manage user interaction and game state.</p>
+        <p>Cleaned and reshaped raw Excel data in Power Query, built a star-schema model with a date table, and wrote DAX measures with CALCULATE, FILTER and ALL, including financial-year-to-date sales for Australia's July–June year. Turned the dashboards into a 1,500-word report with business recommendations.</p>
         <div class="proj-tags">
-          <span class="proj-tag">JavaScript</span>
-          <span class="proj-tag">p5.js</span>
-          <span class="proj-tag">p5.play</span>
+          <span class="proj-tag">Power BI</span>
+          <span class="proj-tag">Power Query</span>
+          <span class="proj-tag">DAX</span>
+          <span class="proj-tag">Excel</span>
         </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://vy-trg.github.io/space-shooter-game/" target="_blank" rel="noopener">Live demo ↗</a>
-          <a class="proj-link secondary" href="https://github.com/vy-trg/space-shooter-game" target="_blank" rel="noopener">View code ↗</a>
-        </div>
+        <span class="proj-year" style="text-align:left">University coursework · files not public</span>
       </div>
     </div>
 
@@ -852,8 +888,18 @@
     <div class="also-built-list">
       <div class="also-built-item">
         <div>
+          <span class="also-built-name">Space Shooter Game</span>
+          <span class="also-built-tech">JavaScript · p5.js — four scenes, collision detection, JSON leaderboard</span>
+        </div>
+        <div class="also-built-links">
+          <a href="https://vy-trg.github.io/space-shooter-game/" target="_blank" rel="noopener">Demo ↗</a>
+          <a class="secondary" href="https://github.com/vy-trg/space-shooter-game" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
+      <div class="also-built-item">
+        <div>
           <span class="also-built-name">Python Data Analysis</span>
-          <span class="also-built-tech">Python · matplotlib — education savings model &amp; rainfall analysis</span>
+          <span class="also-built-tech">Python · NumPy · Matplotlib — education savings model &amp; rainfall analysis</span>
         </div>
         <div class="also-built-links">
           <a href="https://github.com/vy-trg/python-data-analysis" target="_blank" rel="noopener">Code ↗</a>
@@ -862,7 +908,7 @@
       <div class="also-built-item">
         <div>
           <span class="also-built-name">REST Countries API App</span>
-          <span class="also-built-tech">JavaScript · HTML · CSS — Frontend Mentor challenge</span>
+          <span class="also-built-tech">JavaScript · REST API — search, filter, light/dark theme</span>
         </div>
         <div class="also-built-links">
           <a href="https://vy-trg.github.io/rest-countries-api-with-color-theme-switcher-master/" target="_blank" rel="noopener">Demo ↗</a>
@@ -883,28 +929,39 @@
   <div class="exp-item">
     <div class="exp-top">
       <span class="exp-role">Service Staff</span>
-      <span class="exp-org">Hikari Ramen, Orion Shopping Centre, Brisbane QLD</span>
+      <span class="exp-org">Hikari Ramen, Orion Shopping Centre, Springfield QLD</span>
     </div>
     <span class="exp-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jun 2025 — Present</span>
-    <p>Handle POS transactions accurately in a fast-paced, high-volume environment — comfortable with detail-heavy work under time pressure.</p>
+    <ul class="exp-list">
+      <li>Take dine-in, takeaway and phone orders and process POS payments during busy lunch and dinner peaks.</li>
+      <li>Handle phone order changes, missing items and group bookings, reading details back to prevent mistakes.</li>
+      <li>Resolve customer complaints calmly, and escalate to the manager when an issue is beyond my role.</li>
+      <li>Work closely with kitchen staff to keep orders accurate and moving during high-volume shifts.</li>
+    </ul>
   </div>
 
   <div class="exp-item">
     <div class="exp-top">
       <span class="exp-role">Service Staff</span>
-      <span class="exp-org">Dadam Korean BBQ, Orion Shopping Centre, Brisbane QLD</span>
+      <span class="exp-org">Dadam Korean BBQ, Orion Shopping Centre, Springfield QLD</span>
     </div>
-    <span class="exp-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>March — April 2026</span>
-    <p>Kept kitchen and floor operations running smoothly during high-volume service — the same attention to detail and composure under pressure I bring to debugging on a deadline.</p>
+    <span class="exp-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Mar — Apr 2026</span>
+    <ul class="exp-list">
+      <li>Coordinated with kitchen staff and monitored table equipment to keep service running smoothly.</li>
+      <li>Served customers in a fast-paced restaurant with attention to speed, accuracy and teamwork.</li>
+    </ul>
   </div>
 
   <div class="exp-item">
     <div class="exp-top">
       <span class="exp-role">Mathematics Tutor (freelance)</span>
-      <span class="exp-org">Da Nang City, Vietnam</span>
+      <span class="exp-org">Da Nang, Vietnam</span>
     </div>
     <span class="exp-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>May — Oct 2024</span>
-    <p>Tutored students 1:1, adapting explanations to how each person learns best — the same instinct I use when explaining code to someone new to it.</p>
+    <ul class="exp-list">
+      <li>Tutored students one-on-one at different levels, adapting lesson plans to each student's needs.</li>
+      <li>Tracked progress and explained concepts step by step to improve students' understanding and results.</li>
+    </ul>
   </div>
 
 </section>
@@ -919,9 +976,9 @@
     <div>
       <h3>Bachelor of Information Technology (Software Development)</h3>
       <p><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:5px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Griffith University, Brisbane</p>
-      <p>Relevant coursework (2026): Object-Oriented Programming in Java · Software Engineering &amp; Testing (Python) · Business Intelligence (Power BI) · Cybercrime &amp; Online Safety</p>
+      <p>Relevant coursework (2026): Object Oriented Software Development (Java) · Software Projects (Python) · Business Intelligence (Power BI) · Fraud and Cybercrime</p>
     </div>
-    <span class="edu-status">Expected end of 2027</span>
+    <span class="edu-status">Mar 2025 – Nov 2027 (expected)</span>
   </div>
 </section>
 
@@ -934,15 +991,15 @@
   <div class="now-list">
     <div class="now-item">
       <div class="now-dot"></div>
+      <p><strong>Building</strong> — a Pomodoro focus tracker (Node.js, Express, PostgreSQL) and a live Queensland train map using TransLink's real-time feed.</p>
+    </div>
+    <div class="now-item">
+      <div class="now-dot"></div>
       <p><strong>Applying with intent</strong> — targeting internship, WIL and graduate roles in software, data and QA, and tailoring each application instead of mass-applying.</p>
     </div>
     <div class="now-item">
       <div class="now-dot"></div>
-      <p><strong>Going to meetups</strong> — regularly attending Brisbane tech events like GDG Brisbane, Queensland AI and Databricks community meetups to learn and build connections.</p>
-    </div>
-    <div class="now-item">
-      <div class="now-dot"></div>
-      <p><strong>Still building</strong> — this trimester: Java, unit testing and Power BI, with coursework projects coming to GitHub once approved. Now until end of February: open for full-time internship or placement work.</p>
+      <p><strong>Available</strong> — full-time until end of February 2027, then 48 hours per fortnight during semester.</p>
     </div>
   </div>
 </section>
