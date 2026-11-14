@@ -22,7 +22,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
-    --bg:#f9f8f6; --text:#111111; --accent:#80613a; --border:#e5e0d8; --muted:#66615a;
+    --bg:#f9f8f6; --text:#111111; --accent:#6b4a1f; --border:#ddd6ca; --muted:#4a463f; --frame:#efeae1;
     --card:#fdfcfa; --dot:rgba(17,17,17,.2); --img:#eeebe5;
     --ease:cubic-bezier(.4,0,.2,1);
     --serif:'Crimson Pro',Georgia,serif;
@@ -30,7 +30,7 @@
     --mono:'JetBrains Mono',ui-monospace,monospace;
   }
   [data-theme="dark"]{
-    --bg:#0b0c0e; --text:#f3f1ec; --accent:#d4af37; --border:#303139; --muted:#a6a6a6;
+    --bg:#0b0c0e; --text:#f3f1ec; --accent:#d4af37; --border:#303139; --muted:#c4c4c4; --frame:#16171a;
     --card:#111215; --dot:rgba(243,241,236,.05); --img:#16171a;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -112,16 +112,17 @@
   .projects{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;row-gap:96px;}
   .project:nth-child(even){margin-top:96px;}
   .project{display:block;}
-  .project .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--img);border:1px solid var(--border);}
+  .project .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--frame);border:1px solid var(--border);padding:14px;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 32px -12px rgba(0,0,0,.18);}
+  .project .media img,.project .media video{border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08);}
   .project .media img,.project .media video{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:transform .7s var(--ease),opacity .7s var(--ease);}
   .project:hover .media img,.project:hover .media video{transform:scale(1.05);opacity:1;}
-  .project .meta{display:flex;justify-content:space-between;gap:16px;margin-top:28px;color:var(--accent);font-size:10px;}
+  .project .meta{display:flex;justify-content:space-between;gap:16px;margin-top:28px;color:var(--accent);font-size:11px;font-weight:500;}
   .project h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.1;margin-top:12px;letter-spacing:-.01em;}
   .project p{color:var(--muted);margin-top:14px;font-size:15px;}
-  .result{margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--text);letter-spacing:.02em;}
-  .result b{color:var(--accent);font-weight:500;}
+  .result{margin-top:16px;font-family:var(--mono);font-size:13px;color:var(--text);letter-spacing:.02em;}
+  .result b{color:var(--accent);font-weight:700;}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
-  .tags span{border:1px solid var(--border);font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 12px;color:var(--muted);}
+  .tags span{border:1px solid var(--border);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:4px 12px;color:var(--muted);}
   .plinks{display:flex;gap:22px;margin-top:22px;}
   .plinks a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;transition:color .4s var(--ease);}
   .plinks a:hover{color:var(--accent);}
@@ -134,7 +135,7 @@
   .more{margin-top:120px;border-top:1px solid var(--border);}
   .more-row{display:grid;grid-template-columns:3fr 6fr 3fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--border);align-items:baseline;}
   .more-row h4{font-family:var(--serif);font-weight:400;font-size:22px;}
-  .more-row p{color:var(--muted);font-size:14.5px;}
+  .more-row p{color:var(--text);opacity:.82;font-size:15.5px;line-height:1.6;}
   .more-row .r{text-align:right;display:flex;justify-content:flex-end;gap:20px;font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;}
   .more-row .r a{display:inline-flex;align-items:center;min-height:44px;}
   .more-row .r a:hover{color:var(--accent);}
@@ -150,7 +151,11 @@
   .skill-row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);font-size:14.5px;}
   .skill-row:last-child{border-bottom:none;}
   .skill-row span:last-child{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right;}
-  .also{margin-top:40px;color:var(--muted);font-size:14.5px;max-width:60rem;}
+  .also{margin-top:48px;display:grid;grid-template-columns:1fr;gap:28px;border-top:1px solid var(--border);padding-top:36px;}
+  .also-group h3{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;}
+  .chips li{border:1px solid var(--border);padding:6px 14px;font-size:14px;color:var(--text);background:var(--card);}
+  .chips li small{color:var(--muted);font-size:12px;margin-left:6px;}
   .also b{color:var(--text);font-weight:600;}
   @media (max-width:1000px){.skills{grid-template-columns:1fr 1fr;}}
   @media (max-width:640px){.skills{grid-template-columns:1fr;}.skill-card{padding:28px 24px;}}
@@ -173,7 +178,12 @@
   .about .body p{color:var(--muted);margin-top:24px;max-width:40rem;}
   .now{margin-top:40px;padding:28px 32px;border:1px solid var(--border);display:flex;gap:20px;align-items:flex-start;}
   .now .mono{color:var(--accent);white-space:nowrap;padding-top:3px;}
-  .now p{margin:0 !important;color:var(--text) !important;}
+  .now{flex-direction:column;gap:18px;}
+  .upcoming{list-style:none;display:grid;gap:16px;width:100%;}
+  .upcoming li{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:baseline;border-top:1px solid var(--border);padding-top:16px;}
+  .upcoming li:first-child{border-top:0;padding-top:0;}
+  .upcoming b{font-weight:600;color:var(--text);}
+  .upcoming p{margin:4px 0 0 !important;color:var(--muted) !important;font-size:15px;}
   @media (max-width:900px){.about{grid-template-columns:1fr;}.now{flex-direction:column;gap:10px;}}
 
   /* contact (always dark) */
@@ -369,7 +379,12 @@
           <div class="skill-row"><span>PostgreSQL</span><span>Railway Live</span></div>
         </div>
       </div>
-      <p class="also reveal"><b>Also:</b> Git and GitHub, Docker, Express, Socket.IO, Streamlit, Leaflet, GeoJSON, NumPy and Matplotlib, Maven, p5.js, JavaFX, SDLC and Agile, requirements and use cases, WBS and Gantt charts, risk registers, IntelliJ IDEA, VS Code, Excel, draw.io. <b>Spoken:</b> English (fluent), Vietnamese (native).</p>
+      <div class="also reveal">
+        <div class="also-group"><h3>Frameworks &amp; libraries</h3><ul class="chips"><li>Express</li><li>Socket.IO</li><li>Streamlit</li><li>Leaflet</li><li>JavaFX</li><li>p5.js</li><li>NumPy</li><li>Matplotlib</li></ul></div>
+        <div class="also-group"><h3>Tools</h3><ul class="chips"><li>Git &amp; GitHub</li><li>Docker</li><li>Render</li><li>Maven</li><li>IntelliJ IDEA</li><li>VS Code</li><li>Excel</li><li>draw.io</li></ul></div>
+        <div class="also-group"><h3>Process</h3><ul class="chips"><li>SDLC &amp; Agile</li><li>Requirements &amp; use cases</li><li>WBS &amp; Gantt charts</li><li>Risk registers</li></ul></div>
+        <div class="also-group"><h3>Languages I speak</h3><ul class="chips"><li>English <small>fluent</small></li><li>Vietnamese <small>native</small></li></ul></div>
+      </div>
     </div>
   </section>
 
@@ -416,8 +431,9 @@
       <div class="reveal"><span class="sec-num mono">04 / About</span></div>
       <div class="body reveal">
         <blockquote>I like the moment something I've built <em>works for someone else</em>, and I do my best work in a team.</blockquote>
-        <p>At uni I've built a JavaFX game with a game-playing AI, a responsive website as Design Thinking Lead, a MySQL database and Power BI dashboards. I care about the unglamorous parts too: tests, clear READMEs and checking the details. I'm looking for an internship, WIL placement or graduate role in software, data or QA.</p>
-        <div class="now"><span class="mono">Building now</span><p>A Pomodoro focus tracker (Node.js, Express, PostgreSQL) and a live Queensland train map from TransLink's real-time feed. Both will be linked here when they ship.</p></div>
+        <p>This summer I'm building one real project a week, each one aimed at a problem I or people around me actually have: a live transport app that tells me whether I'll make my bus to uni, a focus tracker with shared study rooms, and a tool that finds the cheapest electricity plan for how you really use power. At uni I've built a JavaFX game with a game-playing AI and led a five-person team as Design Thinking Lead.</p>
+        <p>I care about the unglamorous parts too: tests that run on every pull request, clear READMEs, and a bugs log of what broke and why. Every Sunday I demo the week's work to two engineers in my family and fix what they find. I'm looking for an internship, WIL placement or graduate role in software, data or QA.</p>
+        <div class="now"><span class="mono">Coming up</span><ol class="upcoming"><li><span class="mono">16 Nov</span><div><b>Skincare Routine Checker</b><p>paste an ingredient list, get the actives explained and warnings about combos that shouldn't share a routine</p></div></li><li><span class="mono">23 Nov</span><div><b>Brain Food</b><p>one artwork a day with the story behind it, plus three short reads and a quick question so it sticks</p></div></li><li><span class="mono">30 Nov</span><div><b>Hot Day Routes</b><p>a Brisbane map for hot-day walks and runs, with open water fountains and toilets along the route</p></div></li><li><span class="mono">7 Dec</span><div><b>Photo Cleanup</b><p>finds duplicate, near-duplicate and blurry photos on your own device, without uploading anything</p></div></li></ol></div>
       </div>
     </div>
   </section>
