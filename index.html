@@ -261,6 +261,45 @@
       </div>
 
       <div class="projects">
+        <article class="project reveal" id="proj-railway-live">
+          <div class="media"><img src="assets/railway-live.webp" alt="Railway Live map of South East Queensland with trains, trams and ferries and late services listed first" loading="lazy" decoding="async" style="object-position:50% 0"></div>
+          <div class="meta mono"><span>Full stack · Solo</span><span>2026</span></div>
+          <h3>Railway Live</h3>
+          <p>Live trains, buses, trams and ferries for South East Queensland. An Express server decodes TransLink's realtime feeds at most once every 30 seconds for everyone, PostgreSQL holds the timetable for 12,000+ stops, and a &ldquo;Will I make my bus?&rdquo; check rates any train-to-bus change as Make it, Tight or Miss.</p>
+          <p class="result"><b>Every 10 min</b> · on-time history recorded by GitHub Actions</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Leaflet</span><span>GTFS-RT</span><span>Docker</span></div>
+          <div class="plinks">
+            <a href="https://railway-live.onrender.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Live demo</a>
+            <a href="https://github.com/vy-trg/railway-live" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="proj-focus-tracker">
+          <div class="media"><img src="assets/focus-tracker.webp" alt="Focus Tracker landing page with a timer preview and feature tiles" loading="lazy" decoding="async" style="object-position:50% 0"></div>
+          <div class="meta mono"><span>Full stack · Solo</span><span>2026</span></div>
+          <h3>Focus Tracker</h3>
+          <p>A Pomodoro timer that saves every focus session to your own account and shows where your week went. Sign-up and login with Passport and bcrypt, shared study rooms over Socket.IO, habits that tick themselves off, an offline mode, and eye-break and water reminders.</p>
+          <p class="result"><b>CI on every PR</b> · helmet, rate limiting and gitleaks</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Passport</span><span>Socket.IO</span></div>
+          <div class="plinks">
+            <a href="https://focus-tracker-2ooe.onrender.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Live demo</a>
+            <a href="https://github.com/vy-trg/focus-tracker" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="proj-tariffcheck">
+          <div class="media"><img src="assets/tariffcheck.webp" alt="TariffCheck comparing three Queensland electricity plans, cheapest first" loading="lazy" decoding="async" style="object-position:50% 0"></div>
+          <div class="meta mono"><span>Python · Solo</span><span>2026</span></div>
+          <h3>TariffCheck</h3>
+          <p>Finds the cheapest Queensland electricity plan for how you actually use power. It prices real half-hourly usage under flat, block and time-of-use tariffs (including windows that cross midnight), using Decimal so totals never drift, and shows the yearly saving.</p>
+          <p class="result"><b>82</b> pytest tests · test plan and 3 QA bugs fixed</p>
+          <div class="tags"><span>Python</span><span>pandas</span><span>pytest</span><span>Streamlit</span><span>CI</span></div>
+          <div class="plinks">
+            <a href="https://tariffcheck.streamlit.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Live demo</a>
+            <a href="https://github.com/vy-trg/tariffcheck" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a>
+          </div>
+        </article>
+
         <article class="project reveal" id="proj-tetris">
           <div class="media"><video src="assets/tetris-gameplay.mp4" poster="assets/tetris-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Two AI players competing in two-player Tetris mode"></video></div>
           <div class="meta mono"><span>Java · Team of three</span><span>2026</span></div>
@@ -271,18 +310,6 @@
           <div class="plinks"><a href="https://github.com/vy-trg/javafx-tetris" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a></div>
         </article>
 
-        <article class="project reveal" id="proj-railway">
-          <div class="media"><img src="assets/qld-railway-map.webp" alt="Queensland Railway Interactive Map with coloured train routes over Queensland" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
-          <div class="meta mono"><span>JavaScript · Data viz</span><span>2025</span></div>
-          <h3>Queensland Railway Interactive Map</h3>
-          <p>Built from real Queensland station data (GeoJSON), with hover tooltips for each station's name, coordinates and status, and routes drawn in distinct colours with accurate coordinate scaling over a real map.</p>
-          <p class="result"><b>40/40</b> · live demo</p>
-          <div class="tags"><span>JavaScript</span><span>p5.js</span><span>GeoJSON</span></div>
-          <div class="plinks">
-            <a href="https://vy-trg.github.io/qld-railway-map/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Live demo</a>
-            <a href="https://github.com/vy-trg/qld-railway-map" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a>
-          </div>
-        </article>
 
         <article class="project reveal" id="proj-energycheck">
           <div class="media"><img src="assets/energycheck.webp" alt="EnergyCheck website home page" loading="lazy" decoding="async" style="object-position:50% 0"></div>
@@ -297,18 +324,11 @@
           </div>
         </article>
 
-        <article class="project reveal" id="proj-kakadu">
-          <div class="media"><img src="assets/kakadu-erd.webp" alt="Entity relationship diagram of the Kakadu Kitchen database" loading="lazy" decoding="async" style="object-fit:contain;background:#fff"></div>
-          <div class="meta mono"><span>SQL · Database design</span><span>2025</span></div>
-          <h3>Kakadu Kitchen Database</h3>
-          <p>A MySQL database for a beverage supply network in Kakadu National Park, modelling partners, products and shared partnerships, with eight analytical queries (joins, aggregations, subqueries) answering questions like each partner's revenue split.</p>
-          <p class="result"><b>8</b> analytical SQL queries · full ERD</p>
-          <div class="tags"><span>SQL</span><span>MySQL</span><span>ERD</span></div>
-          <div class="plinks"><a href="https://github.com/vy-trg/kakadu-kitchen-database" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>Code</a></div>
-        </article>
       </div>
 
       <div class="more">
+        <div class="more-row"><h4>Queensland Railway Map</h4><p>JavaScript, p5.js and GeoJSON: an interactive station map with each line in its own colour. Graded 40/40.</p><div class="r"><a href="https://vy-trg.github.io/qld-railway-map/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vy-trg/qld-railway-map" target="_blank" rel="noopener">Code</a></div></div>
+        <div class="more-row"><h4>Kakadu Kitchen Database</h4><p>MySQL: a normalised 9-table database from an ER diagram, with eight analytical SQL queries.</p><div class="r"><a href="https://github.com/vy-trg/kakadu-kitchen-database" target="_blank" rel="noopener">Code</a></div></div>
         <div class="more-row"><h4>Space Shooter Game</h4><p>JavaScript and p5.js: four scenes, collision detection and a JSON leaderboard.</p><div class="r"><a href="https://vy-trg.github.io/space-shooter-game/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vy-trg/space-shooter-game" target="_blank" rel="noopener">Code</a></div></div>
         <div class="more-row"><h4>REST Countries App</h4><p>JavaScript and a REST API: search, region filter and a light/dark theme.</p><div class="r"><a href="https://vy-trg.github.io/rest-countries-api-with-color-theme-switcher-master/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vy-trg/rest-countries-api-with-color-theme-switcher-master" target="_blank" rel="noopener">Code</a></div></div>
         <div class="more-row"><h4>Python Data Analysis</h4><p>Python, NumPy and Matplotlib: an education savings model and a rainfall analysis.</p><div class="r"><a href="https://github.com/vy-trg/python-data-analysis" target="_blank" rel="noopener">Code</a></div></div>
@@ -327,17 +347,17 @@
         <div class="skill-card">
           <header><h3>Languages</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></header>
           <div class="skill-row"><span>Java</span><span>Tetris</span></div>
-          <div class="skill-row"><span>JavaScript</span><span>Railway map</span></div>
-          <div class="skill-row"><span>Python</span><span>Data analysis</span></div>
+          <div class="skill-row"><span>JavaScript &amp; Node.js</span><span>Railway Live</span></div>
+          <div class="skill-row"><span>Python</span><span>TariffCheck</span></div>
           <div class="skill-row"><span>SQL</span><span>Kakadu DB</span></div>
           <div class="skill-row"><span>HTML &amp; CSS</span><span>EnergyCheck</span></div>
         </div>
         <div class="skill-card">
           <header><h3>Testing &amp; design</h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></header>
-          <div class="skill-row"><span>JUnit 5 &amp; Mockito</span><span>21 tests</span></div>
-          <div class="skill-row"><span>CI with GitHub Actions</span><span>Tetris</span></div>
+          <div class="skill-row"><span>JUnit 5, pytest, node:test</span><span>Tetris, TariffCheck</span></div>
+          <div class="skill-row"><span>CI with GitHub Actions</span><span>All 4 apps</span></div>
           <div class="skill-row"><span>MVC &amp; State pattern</span><span>Tetris</span></div>
-          <div class="skill-row"><span>REST APIs</span><span>Countries app</span></div>
+          <div class="skill-row"><span>REST APIs &amp; auth</span><span>Focus Tracker</span></div>
           <div class="skill-row"><span>Accessibility (ARIA)</span><span>EnergyCheck</span></div>
         </div>
         <div class="skill-card">
@@ -345,11 +365,11 @@
           <div class="skill-row"><span>MySQL &amp; ERDs</span><span>Kakadu DB</span></div>
           <div class="skill-row"><span>Power BI &amp; DAX</span><span>Coursework</span></div>
           <div class="skill-row"><span>Star schema</span><span>Coursework</span></div>
-          <div class="skill-row"><span>NumPy &amp; Matplotlib</span><span>Data analysis</span></div>
-          <div class="skill-row"><span>GeoJSON</span><span>Railway map</span></div>
+          <div class="skill-row"><span>pandas</span><span>TariffCheck</span></div>
+          <div class="skill-row"><span>PostgreSQL</span><span>Railway Live</span></div>
         </div>
       </div>
-      <p class="also reveal"><b>Also:</b> Git and GitHub, Maven, p5.js, JavaFX, SDLC and Agile, requirements and use cases, WBS and Gantt charts, risk registers, IntelliJ IDEA, VS Code, Excel, draw.io. <b>Spoken:</b> English (fluent), Vietnamese (native).</p>
+      <p class="also reveal"><b>Also:</b> Git and GitHub, Docker, Express, Socket.IO, Streamlit, Leaflet, GeoJSON, NumPy and Matplotlib, Maven, p5.js, JavaFX, SDLC and Agile, requirements and use cases, WBS and Gantt charts, risk registers, IntelliJ IDEA, VS Code, Excel, draw.io. <b>Spoken:</b> English (fluent), Vietnamese (native).</p>
     </div>
   </section>
 
